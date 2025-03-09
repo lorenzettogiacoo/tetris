@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="it">
+
+<head>
+
+    
+
+    <title>Tetris</title>
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800%7cRoboto+Mono:400,700%7cMerriweather:300%7cAbril+Fatface'
+          rel='stylesheet' >
+
+
+    <!-- Bootstrap stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Popup Images -->
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+
+    <!-- css animation -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+
+    <!-- custom stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+
+    <main>
+
+        <!-- MAIN HEADER STARTS-->
+            <header id="header">
+
+            <!-- TOP NAVIGATION -->
+            <nav class="top-navigation-bar navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                <div class="row">
+                <div class="col-md-12">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        
+                        <a id="playText" class="navbar-brand" href="index.html">Tetris</a>                        
+                        
+                    </div>
+                    <audio id="backgroundMusic" src="videoplayback.wav" loop></audio>
+
+<script>
+    let audio = document.getElementById("backgroundMusic");
+
+    // Se l'utente clicca il link, salva lo stato della musica e lascia che la pagina si ricarichi
+    document.getElementById("playText").addEventListener("click", function() {
+        sessionStorage.setItem("playAudio", "true"); // Segna che l'audio deve continuare
+    });
+
+    // Controlla se l'audio deve partire dopo il refresh
+    if (sessionStorage.getItem("playAudio") === "true") {
+        sessionStorage.removeItem("playAudio"); // Pulisce la memoria
+        audio.play(); // Fa ripartire la musica
+    }
+</script>
+                    
+                    
+
+                    
+
+
+
+                    
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="top-navigation-bar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="gioco/tetris.html" >gioca</a></li>
+                                                      
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                    </div>
+                    </div>
+                </div>
+                <!-- /.container-->
+            </nav>
+            <!-- TOP NAVIGATION ENDS -->
+
+        </header>
+        
+        <!-- main header ends-->
+
+        <section id="banner" class="banner">
+            
+            <div class="container">
+            
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner full-height" role="listbox">
+                <div class="item active banner-item">
+                        <div class="row">
+                        <div class="col-sm-7">
+                              <h1 class="animated fadeInUp delay-2">Blocchi di Storia</h1>
+                              <p class="animated fadeInUp delay-3">algoritmi, strategia e perfezione geometrica.</p>
+                        </div>
+                        <div class="col-sm-5 text-center hidden-xs">
+                            <img src="images\sNh7yM5PXRoV5QMj7qEsrT.jpg" class="animated fadeInUp delay-4 img-responsive" alt="banner">
+                        </div>
+                        </div>
+                </div>
+
+                
+
+                
+                </div>                
+              </div>
+
+              <!-- Controls -->
+              
+        </section>
+
+        <section id="who-are-we" class="who-are-we page">
+            <div class="container wow fadeInUp">
+                <div class="row">
+                    <div class="col-sm-5 col-md-6">
+                        <h1>cos'è tetris?</h1>
+                    </div>
+                    <div class="col-sm-7 col-md-6">
+                        <p>Tetris è un capolavoro di semplicità ed eleganza algoritmica: un puzzle dinamico basato su tetramini che sfida 
+                            riflessi, pianificazione spaziale e adattabilità in tempo reale, con un gameplay tanto essenziale quanto infinito.</p>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- testo sinistra-->
+        <section id="services" class="services page">
+            <div class="container wow fadeInUp">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="service clearfix">
+                                <!-- Parte sinistra (Testo) -->
+                                <div class="col-sm-12 col-md-6">
+                                    <a href="storia.html" class="service-number">Storia:</a>
+                                    <h2>Origini sovietiche</h2>
+                                    <p>Tetris nasce nel 1984 da Aleksej Pažitnov in URSS, ispirato al Pentomino. 
+                                    Programmato in Pascal su Elektronika 60, inizialmente usava caratteri ASCII.
+                                     Vadim Gerasimov lo porta su MS-DOS con grafica migliorata.
+                                    </p>
+                                    <h2>Espansione globale</h2>
+                                    <p>Nel 1986 arriva in Occidente e scatena una battaglia legale per i diritti. 
+                                        Nintendo vince e nel 1989 lo pubblica su Game Boy, rendendolo un successo mondiale.
+
+                                        </p>
+                                </div>
+        
+                                <!-- Parte destra (Immagine) -->
+                                <div class="col-sm-12 col-md-6">
+                                    <img class="img-centered" src="images/Original_Tetris.png" alt="Tetris">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+         <!-- testo destra-->
+        <section id="services" class="services page">
+            <div class="container wow fadeInUp">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="service clearfix">
+                                <!-- Parte sinistra (Immagine) -->
+                                <div class="col-sm-12 col-md-6">
+                                    <img class="img-centered" src="images\tumblr_m4lkdko3F01r0ralmo1_r2_500.gif" alt="Tetris">
+                                </div>
+        
+                                <!-- Parte destra (Testo) -->
+                                <div class="col-sm-12 col-md-6">
+                                    <a href="gameplay.html" class="service-number">Gameplay:</a>
+                                    <h2>Regole base</h2>
+                                    <p>Si gioca su una griglia 10x20. I pezzi cadono dall’alto e si possono spostare e ruotare.
+                                        Eliminare righe aumenta il punteggio. La velocità cresce col tempo, aumentando la difficoltà.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+<!-- testo sinistra-->
+        <section id="services" class="services page">
+            <div class="container wow fadeInUp">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="service clearfix">
+                                <!-- Parte sinistra (Testo) -->
+                                <div class="col-sm-12 col-md-6">
+                                    <a href="tetramini.html" class="service-number">Tetramini:</a>
+                                    <h2>Sette forme</h2>
+                                    <p>Ci sono sette pezzi diversi, ognuno con caratteristiche uniche. 
+                                  Il sistema SRS permette rotazioni più intuitive rispetto alle versioni classiche.
+                                    </p>
+                                    
+                                </div>
+        
+                                <!-- Parte destra (Immagine) -->
+                                <div class="col-sm-12 col-md-6">
+                                    <img class="img-centered" src="images\tetris-multicolored-pattern-4u7ed6koskqhcez1.jpg" alt="Tetris">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- testo destra-->
+        <section id="services" class="services page">
+            <div class="container wow fadeInUp">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="service clearfix">
+                                <!-- Parte sinistra (Immagine) -->
+                                <div class="col-sm-12 col-md-6">
+                                    <img class="img-centered" src="images\tetris_t-spin.gif" alt="Tetris">
+                                </div>
+        
+                                <!-- Parte destra (Testo) -->
+                                <div class="col-sm-12 col-md-6">
+                                    <a href="strategie.html" class="service-number">Strategie:</a>
+                                    <h2>Tecniche avanzate</h2>
+                                    <p>T-Spin, Hard Drop, stacking e combo 
+                                    chain sono tecniche avanzate per massimizzare il punteggio e ottimizzare lo spazio.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- testo sinistra-->
+        <section id="services" class="services page">
+            <div class="container wow fadeInUp">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="service clearfix">
+                                <!-- Parte sinistra (Testo) -->
+                                <div class="col-sm-12 col-md-6">
+                                    <a href="varianti.html" class="service-number">Varianti:</a>
+                                    <h2>Versioni principali</h2>
+                                    <p>Tetris ha molte versioni ufficiali, tra cui quelle per Game Boy, DS e Tetris 99. 
+                                        Alcune combinano il gameplay con altri giochi, come Puyo Puyo Tetris.
+                                    </p>
+                                    
+                                </div>
+        
+                                <!-- Parte destra (Immagine) -->
+                                <div class="col-sm-12 col-md-6">
+                                    <img class="img-centered" src="images\Tetris®-Forever-–-Announcement-Trailer-–-Nintendo-Switch-YouTube-—-Mozilla-Firefox-8_27_2024-12_59_21-PM.png" alt="Tetris">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- testo destra-->
+        <section id="services" class="services page">
+            <div class="container wow fadeInUp">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="service clearfix">
+                                <!-- Parte sinistra (Immagine) -->
+                                <div class="col-sm-12 col-md-6">
+                                    <img class="img-centered" src="images\1time tetris game 1200.jpg" alt="Tetris">
+                                </div>
+        
+                                <!-- Parte destra (Testo) -->
+                                <div class="col-sm-12 col-md-6">
+                                    <a href="programmazione.html" class="service-number">Programmazione:</a>
+                                    <h2>Generazione pezzi</h2>
+                                    <p>Le prime versioni generavano pezzi casualmente, causando squilibri.
+                                        Il sistema 7-Bag rimescola i pezzi in gruppi di sette per maggiore equità.
+                                    </p>
+                                    <h2>Collisioni e rotazioni</h2>
+                                    <p>Il Wall Kick System permette rotazioni vicino ai bordi spostando leggermente il pezzo.
+                                         Gli offset predefiniti migliorano il posizionamento.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- testo sinistra-->
+        <section id="services" class="services page">
+            <div class="container wow fadeInUp">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="service clearfix">
+                                <!-- Parte sinistra (Testo) -->
+                                <div class="col-sm-12 col-md-6">
+                                    <a href="algoritmi.html" class="service-number">Algoritmi:</a>
+                                    <h2>AI in Tetris</h2>
+                                    <p>Le IA valutano la griglia e scelgono la mossa migliore basandosi su altezza della pila,
+                                         righe eliminabili e spazi vuoti. Alcuni bot usano reti neurali per migliorare nel tempo.
+                                    </p>
+                                    
+                                </div>
+        
+                                <!-- Parte destra (Immagine) -->
+                                <div class="col-sm-12 col-md-6">
+                                    <img class="img-centered" src="images\Screen+Shot+2013-06-04+at+22.06.11.png" alt="Tetris">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- testo destra-->
+         <section id="services" class="services page">
+            <div class="container wow fadeInUp">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="service clearfix">
+                                <!-- Parte sinistra (Immagine) -->
+                                <div class="col-sm-12 col-md-6">
+                                    <img class="img-centered" src="images\263911-tetris-dos-opening-title-screen.png" alt="Tetris">
+                                </div>
+        
+                                <!-- Parte destra (Testo) -->
+                                <div class="col-sm-12 col-md-6">
+                                    <a href="ottimizzazione.html" class="service-number">Ottimizzazione:</a>
+                                    <h2>Efficienza del codice</h2>
+                                    <p>Tetris è ottimizzato con matrici 2D, 
+                                        bitmasking e tabelle precomputate per gestire movimenti e collisioni rapidamente. 
+                                        Il rendering è ottimizzato per hardware limitato.
+                                        </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+      
+
+        
+
+
+        
+
+                  
+
+        
+        <!-- CTA section ends -->
+
+         <!-- footer section starts -->
+        
+        <!-- footer section ends -->
+
+    </main>
+<!-- DOCUMENT WRAPPER ENDS -->
+
+
+
+<!-- SCRIPTS -->
+
+    <!-- jQuery (necessary for all the plugins) -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js"></script>
+    <script src="js/gmaps.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+<!-- SCRIPTS ENDS -->
+</body>
+
+</html>
+
